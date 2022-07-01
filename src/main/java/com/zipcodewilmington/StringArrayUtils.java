@@ -67,15 +67,15 @@ public class StringArrayUtils {
      * @return true if the order of the array is the same backwards and forwards
      */ // TODO
     public static boolean isPalindromic(String[] array) {
-        int s= array.length-1;
-        int s1 = 0;
-        List<String> list = new ArrayList<String>(Arrays.asList(array));
-        while (s>s1){
-            if (list.get(s) == list.get(s1)){
-                return true;
-            } else;
-                return false;
-        }
+//        int s= array.length-1;
+//        int s1 = 0;
+//        List<String> list = new ArrayList<String>(Arrays.asList(array));
+//        while (s>s1){
+//            if (list.get(s) == list.get(s1)){
+//                return true;
+//            } else;
+//                return false;
+//        }
         return false;
     }
 
@@ -84,12 +84,13 @@ public class StringArrayUtils {
      * @return true if each letter in the alphabet has been used in the array
      */ // TODO
     public static boolean isPangramic(String[] array) {
-        ArrayList <String> list = new ArrayList<String>();
-        for (char c = 'a'; c< 'z';c++){
-
-        }
-
-        return true;
+//        ArrayList <String> list = new ArrayList<String>();
+//        for (char c = 'a'; c< 'z';c++){
+//
+//        }
+//
+//        return true;
+        return false;
     }
 
     /**
@@ -98,7 +99,13 @@ public class StringArrayUtils {
      * @return number of occurrences the specified `value` has occurred
      */ // TODO
     public static int getNumberOfOccurrences(String[] array, String value) {
-        return 0;
+        int count = 0;
+        for (int x = 0; x < array.length; x++) {
+            if (array[x].equals(value)) {
+                count++;
+            }
+        }
+        return count;
     }
 
     /**
@@ -115,7 +122,16 @@ public class StringArrayUtils {
      * @return array of Strings with consecutive duplicates removes
      */ // TODO
     public static String[] removeConsecutiveDuplicates(String[] array) {
-        return null;
+        String s ="";
+        for (int x = 0; x < array.length-1; x++) {
+            if (array[x] != array[x + 1]) {
+                s+=(array[x]+" ");
+            }
+        }
+        s+=(array[array.length-1]);
+        String[] ss = s.split(" ");
+        return ss;
+
     }
 
     /**
@@ -123,6 +139,7 @@ public class StringArrayUtils {
      * @return array of Strings with each consecutive duplicate occurrence concatenated as a single string in an array of Strings
      */ // TODO
     public static String[] packConsecutiveDuplicates(String[] array) {
+
         return null;
     }
 
